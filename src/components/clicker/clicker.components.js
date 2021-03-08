@@ -45,7 +45,7 @@ class Clicker extends Component {
         <div className='timer-shell'>
         
        
-        <div style={{transform: `rotate(${-this.state.value*6}deg)`, width: "3px", height: "75px", border: "1px solid black", margin: "auto"}}>
+        <div style={{transform: `rotate(${-this.state.value*6}deg)`}} className="strike">
         {this.state.value}
         </div>
         

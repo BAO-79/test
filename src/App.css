@@ -13,3 +13,9 @@
   border-radius: 50%;
   border: 1px solid black;
 }
+.strike {
+  width: 3px;
+  height: 75px;
+  border: 1px solid black;
+  margin: auto;
+}
