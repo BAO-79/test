@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Input from './input'
-import '../App.css';
+import '../../App.css';
 
 let timer = undefined;
+
 
 class Clicker extends Component {
     constructor(props) {
@@ -40,11 +41,23 @@ class Clicker extends Component {
 
     render() {
         
-        return (<div>
-                <div>{this.state.value}</div>
-                <div><Input onInputChange={this.onInputChange} inputValue={this.state.inputValue}/></div>
+        return (<div className="container">
+        <div className='timer-shell'>
+        
+       
+        <div style={{transform: `rotate(${-this.state.value*6}deg)`, width: "3px", height: "75px", border: "1px solid black", margin: "auto"}}>
+        {this.state.value}
+        </div>
+        
+        </div>
+
+        <div className="buttons">
+      
                 <button onClick={this.start}>Start</button>
                 <button onClick={this.pause}>Pause</button>
+                
+                <div><Input onInputChange={this.onInputChange} inputValue={this.state.inputValue}/></div>
+                </div>
        </div>
         
         );
